@@ -1,0 +1,24 @@
+.login_form{
+    background: var(--primary-color);
+    padding: 40px;
+    border: 5px;
+}
+
+.login_btn{
+    background: #fff;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.login_form p{
+    margin-top: 30px;
+}
+
+.login_form p a{
+    color: rgba(225,225,225,0.735);
+}
+
+.login_form input[type="file"]{
+    color: #fff;
+    cursor: pointer;
+}
