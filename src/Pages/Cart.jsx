@@ -4,7 +4,7 @@ import Helmet from '../Components/Helmet/Helmet'
 import CommonSection from '../Components/UI/CommonSection'
 import { Container, Row, Col } from 'reactstrap'
 import tdImg from '../assets/images/arm-chair-01.jpg'
-import { cartActions } from '../Redux/slice/cartSlice'
+import { deleteItem } from '../Redux/slice/cartSlice'
 import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
@@ -76,7 +76,7 @@ const Cart = () => {
 const Tr = ({ item }) => {
   const dispatch = useDispatch()
   const deleteProduct = () =>{
-    dispatch(cartActions.deleteItem(item.id))
+    dispatch(deleteItem(item.id))
   }
 
   return(

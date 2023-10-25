@@ -31,15 +31,15 @@ const Header = () => {
   const navigate = useNavigate()
 
   const stickyHeaderFunc = () =>{
-    window.addEventListener('scroll', ()=>{
-      if (document.body.scrollTop > 80 || 
-        document.documentElement.scrollTop > 80){
-        headerRef.currernt.classList.add('sticky_header')
-      }
-      else{
-        headerRef.current.classList.remove('sticky_header')
-      }
-    })
+    // window.addEventListener('scroll', ()=>{
+    //   if (document.body.scrollTop > 80 || 
+    //     document.documentElement.scrollTop > 80){
+    //     headerRef.currernt.classList.add('sticky_header')
+    //   }
+    //   else{
+    //     headerRef.current.classList.remove('sticky_header')
+    //   }
+    // })
   }
 
   useEffect(()=>{
@@ -48,7 +48,7 @@ const Header = () => {
     return ()=> window.removeEventListener('scroll',stickyHeaderFunc)
   });
 
-  const menuToggle = () => menuRef.current.classList.toggle('active_menu')
+  //const menuToggle = () => menuRef.current.classList.toggle('active_menu')
 
   const navigateToCart = () =>{
       navigate('/cart')
@@ -66,7 +66,8 @@ const Header = () => {
                 <h1>MultiMart</h1>
               </div>
             </div>
-            <div className="navigation" ref={menuRef} onClick={menuToggle}>
+            {/*  onClick={menuToggle} */}
+            <div className="navigation" ref={menuRef}>
               <ul className='menu'>
                 {
                   nav_links.map((item,index)=>(
@@ -93,7 +94,7 @@ const Header = () => {
                 <span className='badge'>{totalQuantity}</span>
                 </span>
                 <div className="mobile_menu">
-              <span onClick={menuToggle}><i class="ri-menu-line"></i></span>
+              {/* <span onClick={menuToggle}><i class="ri-menu-line"></i></span> */}
             </div>
           </div>
           </div>

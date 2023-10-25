@@ -8,7 +8,7 @@ import '../Styles/ProductDetails.css';
 import { useState } from 'react'
 import ProductsList from '../Components/UI/ProductsList'
 import { useDispatch } from 'react-redux'
-import {cartActions} from '../Redux/slice/cartSlice'
+import {addItem} from '../Redux/slice/cartSlice'
 import { toast } from 'react-toastify'
 
 const ProductDetails = () => {
@@ -47,7 +47,7 @@ const ProductDetails = () => {
   }
 
   const addToCart = () =>{
-    dispatch(cartActions.addItem({
+    dispatch(addItem({
       id,
       image:imgUrl,
       productName,
